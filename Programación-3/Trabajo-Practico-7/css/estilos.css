@@ -1,0 +1,63 @@
+
+/* 
+    Created on : 28/10/2020, 16:07:41
+    Author     : Bruno Tarditi 
+*/
+.boton{
+    text-decoration: none;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #EA8008;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.boton:hover{
+    background-color: #FCC17D;
+}
+
+.contenedor{
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.cajita {
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 15px 10px 10px;
+    border: 1px solid #cecece;
+    background-color: #efefef;
+    color: #787575;
+    border-radius: 5px;
+    width: 25%;
+    outline: none;
+}
+
+.submit {
+    background-color: #3fb6b2;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.submit:hover {
+    background-color: #43a09d;
+}
+
+.tipografia{
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.formulario{
+    text-align: center; 
+    margin-top: 0;
+}
