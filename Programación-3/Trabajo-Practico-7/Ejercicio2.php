@@ -1,3 +1,4 @@
+<!-- Arrays PHP Cree un formulario con una caja de texto que permita la carga de una cadena cualquiera y un botón submit, envié el texto ingresado a la propia página, recupere el texto con php y en base a la cadena ingresada cree un Array y almacene en cada posición cada una de las letras que componen la cadena, finalmente recorra mediante un foreach la cadena y muestre cada uno de los elementos. Investigue las funciones necesarias para lograr con éxito la operación. -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,14 +8,14 @@
     </head>
 
     <body>
-        <div class="contenedor">
-            <form action="Ejercicio2.php" method="post" class="formulario">
+        <div class="contain">
+            <form action="Ejercicio2.php" method="post" class="form2">
                 <label class="tipografia" style="font-size: 18pt">Ingrese una cadena de texto: </label>
                 <br><br>
-                <input class="cajita" type="text" name="cadena" id="cadena" style="align-: center"/>
+                <input class="box" type="text" name="cadena" id="cadena" style="align-content: center"/>
                 <br><br>
                 <input type="hidden" name="requerido" id="requerido" value="true">
-                <input type="submit" value="Enviar" class="boton"/>      
+                <input type="submit" value="Enviar" class="submit1"/>      
 
             </form>
         </div>
