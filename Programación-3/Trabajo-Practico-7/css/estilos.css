@@ -3,7 +3,42 @@
     Created on : 28/10/2020, 16:07:41
     Author     : Bruno Tarditi 
 */
-.boton{
+
+.form1{
+
+    background-color: white;
+    padding: 20px;
+    margin: 100px auto;
+    width: 400px;
+    
+}
+
+.form2{
+    text-align: center; 
+    margin-top: 0;
+}
+
+
+.contain {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.box { 
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 10px;
+    border: 1px solid #cecece;
+    background-color: #efefef;
+    color: #787575;
+    border-radius: 5px;
+    width: 380px;
+    outline: none;
+}
+
+.submit1 {
     text-decoration: none;
     padding: 12px 45px;
     border-radius: 5px;
@@ -15,30 +50,10 @@
     margin: 0;
     font-weight: bold;
 }
-.boton:hover{
+.submit1:hover {
     background-color: #FCC17D;
 }
-
-.contenedor{
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
-
-.cajita {
-    margin-bottom: 10px;
-    font-size: 11pt;
-    padding: 15px 10px 10px;
-    border: 1px solid #cecece;
-    background-color: #efefef;
-    color: #787575;
-    border-radius: 5px;
-    width: 25%;
-    outline: none;
-}
-
-.submit {
+.submit2 {
     background-color: #3fb6b2;
     padding: 12px 45px;
     border-radius: 5px;
@@ -49,7 +64,7 @@
     margin: 0;
     font-weight: bold;
 }
-.submit:hover {
+.submit2:hover {
     background-color: #43a09d;
 }
 
@@ -57,7 +72,6 @@
     font-family: Helvetica, Arial, sans-serif;
 }
 
-.formulario{
-    text-align: center; 
-    margin-top: 0;
-}
+
+
+
