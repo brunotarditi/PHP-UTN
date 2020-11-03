@@ -71,6 +71,7 @@ de SQL del objeto elegido.-->
                         <label class="form-check-label" for="motor3">Eléctrico</label>
                     </div>
                     <br><label>Accesorios:</label><br>
+                    
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" name="accesorios[]" value="Airbag" id="cbx1"/>
                         <label class="form-check-label" for="cbx1">Airbag</label>
@@ -127,10 +128,10 @@ de SQL del objeto elegido.-->
                             
                             <td>
                                 <a href="editar.php?id=<?php echo $row['id']?>" class="btn btn-secondary"> 
-                                    <i class="fas fa-marker"></i>
+                                    <i class="fas fa-pen"></i>
                                 </a>
                                 <a href="eliminar.php?id=<?php echo $row['id']?>" class="btn btn-danger"> 
-                                    <i class="far fa-trash-alt"></i>
+                                    <i class="fas fa-trash"></i>
                                 </a>
                             </td>
 

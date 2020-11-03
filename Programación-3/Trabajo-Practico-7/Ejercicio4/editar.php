@@ -21,24 +21,42 @@ if (isset($_GET['id'])) {
 }
 
 if (isset($_POST['actualizar'])) {
-    $id = $_GET['id'];
-    $marca = $_POST['marca'];
-    $modelo = $_POST['modelo'];
-    $color = $_POST['color'];
-    $motor = $_POST['motor'];
-    $accesorios = $_POST['accesorios'];
-    $acc = implode(" | ", $accesorios);
-    $observaciones = $_POST['observaciones'];
+ 
+    if (empty($_POST['marca']) || empty($_POST['modelo']) || empty($_POST['color']) || empty($_POST['motor'])) {
+        $_SESSION['message'] = 'Los campos no pudieron actualizarse debido a que uno o muchos se dejaron vacíos.';
+        $_SESSION['message_type'] = 'danger';
+    
+        header("Location: formulario.php");
 
-    $sql = "UPDATE automoviles SET marca = '$marca', modelo = '$modelo', color = '$color', motor = '$motor',  accesorios = '$acc' , observaciones = '$observaciones' WHERE id = $id";
-    mysqli_query($conn, $sql);
+    }
+    else{
+ 
+        $id = $_GET['id'];
+        $marca = $_POST['marca'];
+        $modelo = $_POST['modelo'];
+        $color = $_POST['color'];
+        $motor = $_POST['motor'];
+        $accesorios = $_POST['accesorios'];
+        $acc = implode(" | ", $accesorios);
+        $observaciones = $_POST['observaciones'];
 
-    $_SESSION['message'] = 'Datos actualizados correctamente.';
-    $_SESSION['message_type'] = 'warning';
-    header("Location: formulario.php");
+        if ($accesorios == "") {
+            $acc = "Ninguno";
+        }
 
+        if ($observaciones == "") {
+            $observaciones = "Ninguna";
+        }
+
+        $sql = "UPDATE automoviles SET marca = '$marca', modelo = '$modelo', color = '$color', motor = '$motor',  accesorios = '$acc' , observaciones = '$observaciones' WHERE id = $id";
+        mysqli_query($conn, $sql);
+
+        $_SESSION['message'] = 'Datos actualizados correctamente.';
+        $_SESSION['message_type'] = 'warning';
+        header("Location: formulario.php");
+
+    }
 }
-
 ?>
 
 <?php include("header.php")?>
@@ -100,6 +118,7 @@ if (isset($_POST['actualizar'])) {
                                 <label class="form-check-label" for="motor3">Eléctrico</label>
                             </div>
                             <br><label>Accesorios:</label><br>
+                        
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" name="accesorios[]" value="Airbag" id="cbx1" <?php $acc = explode(" | ", $accesorios); if (in_array('Airbag', $acc)) echo "checked"; 
                                     ?>/>
