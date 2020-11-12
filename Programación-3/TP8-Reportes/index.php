@@ -12,7 +12,7 @@
     <body>
         <div class="row mt-5 justify-content-center">
             <div class="col-3 px-4 py-4" style="background-color: #A8CADA">
-                <form action="generarExcel.php">
+                <form action="crearExcel.php" method="POST">
                     <div class="form-group">
                         <label>País:</label>
                         <input type="text" class="form-control" name="pais" id="pais"/>
@@ -34,7 +34,7 @@
                         </select>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-success" name="excel" formaction="generarExcel.php">Generar Excel</button>
+                        <button type="submit" class="btn btn-success" name="excel" id="excel">Generar Excel</button>
                     </div>
                 </form>
             </div>
