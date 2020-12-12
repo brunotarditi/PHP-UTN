@@ -14,7 +14,6 @@
                 <br><br>
                 <input class="box" type="text" name="cadena" id="cadena" style="align-content: center"/>
                 <br><br>
-                <input type="hidden" name="requerido" id="requerido" value="true">
                 <input type="submit" value="Enviar" class="submit1"/>      
 
             </form>
@@ -24,8 +23,8 @@
 </html>
 
 <?php
-if (!empty($_POST['requerido']) && $_POST['requerido'] == true) {
 
+if(isset($_POST['cadena'])){
     if (empty($_POST['cadena'])) {
         echo '<p align="center" class="tipografia" style="font-size: 12pt">Debe ingresar una cadena de texto.</p>';
     } else {
